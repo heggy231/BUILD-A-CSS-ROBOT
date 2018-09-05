@@ -54,3 +54,33 @@ Part 1: Customize shapes using CSS border properties
   if you give all same radii > it is circle!
 
   - To make circular curve, radius be at least half the length of the shape's edge.  since foot length is 40px, you only need 20px for border-radius. (just the half the size length.  anything less than 20px will look squarish rather than round!)
+   border-radius: 20px;
+
+  - put border in foot circle: border needs 3 attribute to become visible.
+
+    div { border: width style color; }
+    
+    declare width in px, color any value system
+    border style: solid, dashed, dotted, double
+
+    adding border will increase the width of the foot box.  therefore, increase the border-radius to accommodate the increase in length.  
+
+    .foot {
+      border-radius: 40px;
+      border: 15px solid #999;
+    }
+
+  - Style the borders of any HTML element one by one to make triangles, stars, trapezoids, and more:
+    div {
+      border-left: width style color;
+      botder-top: width style color;
+      etc...
+    }
+  ex) of css for .triangle (div has no width, no height, no background color, so it shouldn't be visible.  There is width, style, and color for bottom border)
+    .triangle {
+      height: 0;
+      width: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 50px solid transparent;
+    }
