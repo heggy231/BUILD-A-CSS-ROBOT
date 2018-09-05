@@ -202,3 +202,44 @@ Make robot disco with me, shoot lasers
     We have been dependent on margin to line up all piece of robot.  once we take off margin.. nothing lines up!
     We used margin-zero-auto to build robpt parts b/c learning borders and radial is hard enough.  
     - now, focus on CSS Positioning, since we want the robot to free to move around the screen!  It can't glued to the middle of the page.
+
+- got rid of all the styling for div use CSS positioning
+  div {
+    height: 150px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  * x,y,z coordinates: z as third dimension
+    - As you move right x-val increases
+    - move down, y-val increases
+    - Unit used for grid squares = pixels
+  
+  * 5 ways to position things:
+    1st) static: default positioning
+    2nd) relative: move relative to others
+    - any time not static, you escape from normal flow and opens door to call on four new properties: top, right, bottom, left
+    3rd) left, top: X, Y Axes  (you can use them to declare from left side, from top of, its container in px)
+
+    - We are not using right, bottom, b/c we want everything oriented same direction.
+
+    - when .beep is relatively positioned, "go 70px away from the left side!"
+    .beep {
+      /* kick off free positioning */
+      position: relative;
+      /* go away 70px from left or move 70px to right */
+      left: 70px;
+    }
+
+    Note: how much left you can go?  just trial and error!
+
+    - Let's move the head!  Remember to move the antenna along with it!
+    * Assign the .brain style position of relative
+    * Give .brain left: 70px
+    * Increase .beep left: 140px
+    .brain {
+      position: relative;
+      left: 70px;
+    }
+    .beep {
+      left: 140px;
+    }
