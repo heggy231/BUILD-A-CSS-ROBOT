@@ -263,3 +263,34 @@ Like top, left, etc, z-index only works on positioned elements.
   z-index: -1;
 }
 
+- Summary of what we did: Cotbot is positioned in relation to one another, rather than being dependent on the center of the screen.
+
+- Question to Francisco:
+
+http://jsbin.com/kutigefeso/1/edit?html,css,output
+
+When I say .foot {
+position: relative;
+top: -10px
+}
+
+- How does browser know that top is suppose to be positioned relative to .torso?
+
+- Let's move the robot around the screen!  Let's stick all robot parts!  <style> cascade down from the outermost containers to the inner ones. 
+
+So create outer HTML element that contains all the robot pieces.  If we wrote CSS style for that container element, those style should effect every HTML element inside the container.
+
+  - Create new div class called: "robot", wrap it around the four other divs that robot pieces.
+  * before
+  <div class="beep"></div>
+  <div class="brain"></div>
+  <div class="torso"></div>
+  <div class="foot"></div>
+
+  * after (wrap all the pieces inside). .robot is container element that contains all four HTML element.
+  <div class="robot">
+    <div class="beep"></div>
+    <div class="brain"></div>
+    <div class="torso"></div>
+    <div class="foot"></div>
+  </div>
