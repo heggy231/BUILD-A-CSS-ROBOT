@@ -147,3 +147,11 @@ Why would cutting the background-size in half give it four eyes?
 brain {
   background-size: calc(75px/2) calc(150px/2);
 }
+
+We actually want the gradient to think it's only half of width, but still the full 150px height.
+
+background-size: width height;
+background-size: 75px 150px;
+
+OR use % for skipping Math
+background-size: 50% 100%;
