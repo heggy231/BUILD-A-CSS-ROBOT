@@ -294,3 +294,17 @@ So create outer HTML element that contains all the robot pieces.  If we wrote CS
     <div class="torso"></div>
     <div class="foot"></div>
   </div>
+
+- any CSS style should be inside .robot container-div
+  * Q&A: Everything on pg is already inside of <body>!  Why am putting it inside of body container?
+  * Answer: Normally, yes, we can use body as container.  what if we want to move the robot in and out of the body as one contained object.
+ 
+    // position will move entire Cotbot over to right!
+    .robot {
+      position: relative;
+      left: 200px;
+    }
+
+  http://jsbin.com/kozapa/5/edit?html,output
+
+  

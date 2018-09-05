@@ -5,28 +5,22 @@
   <meta name="viewport" content="width=device-width">
   <title>COTBOTS</title>
   <style>
-  div {
-
+  /* position will move entire Cotbot over to right! */
+  .robot {
+      position: relative;
+      left: 200px;
   }
-  .foot {
-    height: 40px;
-    width: 40px;
-    background: #ccc;
-    /* half of length of foot for circular curve */
-    border-radius: 40px;
-    border: 15px solid #999;
-    position: relative;
-    left: 110px;
-    top: -10px;
-    z-index: -1;
-  }
-  .torso {
+  .beep {
+    width: 5px;
     height: 0;
-    width: 140px;
-    border-top: 300px solid #bc6;
-    border-left: 75px solid transparent;
-    border-right: 75px solid transparent;
-    border-radius: 20px 20px 100px 100px;
+    /* border: width style color */
+    border: 5px solid transparent;
+    border-top: 10px solid #777;
+    border-bottom: 80px solid #888;
+    /* opens .beep to break out of static positioning */
+    position: relative;
+    /* go away from left side means push 70px to right */
+    left: 140px;
   }
   .brain { 
     background: radial-gradient(circle, white 15%, transparent 40%), #673AB7;
@@ -41,25 +35,34 @@
     position: relative;
     left: 70px;
   }
-  .beep {
-    width: 5px;
+  .torso {
     height: 0;
-    /* border: width style color */
-    border: 5px solid transparent;
-    border-top: 10px solid #777;
-    border-bottom: 80px solid #888;
-    /* opens .beep to break out of static positioning */
+    width: 140px;
+    border-top: 300px solid #bc6;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-radius: 20px 20px 100px 100px;
+  }
+  .foot {
+    height: 40px;
+    width: 40px;
+    background: #ccc;
+    /* half of length of foot for circular curve */
+    border-radius: 40px;
+    border: 15px solid #999;
     position: relative;
-    /* go away from left side means push 70px to right */
-    left: 140px;
+    left: 110px;
+    top: -10px;
+    z-index: -1;
   }
   </style>
 </head>
 <body>
-  <div class="beep"></div>
-  <div class="brain"></div>
-  <div class="torso"></div>
-  <div class="foot"></div>
-
+  <div class="robot">
+    <div class="beep"></div>
+    <div class="brain"></div>
+    <div class="torso"></div>
+    <div class="foot"></div>
+  </div>
 </body>
 </html>
