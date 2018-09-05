@@ -94,3 +94,8 @@ Part 1: Customize shapes using CSS border properties
       border-left: 75px solid transparent;
       border-right: 75px solid transparent;
     }
+- Get rid of background color of div
+    background: #ccc removed!
+  Note: everything is positioned normal document flow: flush left, stacked tightly on top of each other.
+    1) center the div!
+      margin: 0 auto;
