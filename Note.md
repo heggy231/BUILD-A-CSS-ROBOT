@@ -134,3 +134,10 @@ Radial gradients radiate outward, in all directions, from a central point.
     background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
   }
   // add in radial gradient with preserve the existing background color!
+  * by default a round gradient wants to be centered in HTML element that contains it.  Use this default and use background-size, to control how many times, and where, it appears in the shape.
+
+  - By default, gradient wants to be centered in the background.
+    Use this default characteristic and background-size to trick it into thinking background isn't 150x150 px.  We want 2 gradients, so we'll make it half that size!
+brain {
+  background-size: 75px; // half of 150 width makes 2 eyes!
+}
