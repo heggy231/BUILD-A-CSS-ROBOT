@@ -165,3 +165,40 @@ background: -webkit-radial-gradient(circle, white 36%, transparent 0%), #cc5;
 
 }
 <div class="beep"></div> //antenna
+  Note: robot bumped down beep div is pushing down 150px height!
+
+- flesh out basics of antenna's size, style, color
+  * look 80px tall
+    notice it is not the height of div but the thickness of the border
+.beep {
+  width: 5px;
+  height: 0;
+  /* border: width style color */
+  border-bottom: 80px solid #888;
+}
+
+- Adding transparent left and right border will give the antenna a trapezoid shape like the torso.  But when we add a top border, something awesome!
+  * since border-right and border-left need the same CSS, take advantage of the cascade and assign that style to all borders!
+  * Then override border-top and border-bottom!
+
+  .beep {
+    width: 5px;
+    height: 0;
+    /* border: width style color */
+    border: 5px solid transparent;
+    border-top: 10px solid #777;
+    border-bottom: 80px solid #888;
+  }
+
+# Part 2: Using CSS to position elements on a webpage
+Make robot disco with me, shoot lasers
+- Mission:
+1. CSS positioning in depth
+2. The idea of "in front of" and "behind" in CSS
+3. Writing CSS transforms to flip and rotate elements
+
+1. CSS positioning in depth
+  - Get on grid sytem.  
+    We have been dependent on margin to line up all piece of robot.  once we take off margin.. nothing lines up!
+    We used margin-zero-auto to build robpt parts b/c learning borders and radial is hard enough.  
+    - now, focus on CSS Positioning, since we want the robot to free to move around the screen!  It can't glued to the middle of the page.
