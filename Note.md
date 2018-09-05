@@ -99,3 +99,28 @@ Part 1: Customize shapes using CSS border properties
   Note: everything is positioned normal document flow: flush left, stacked tightly on top of each other.
     1) center the div!
       margin: 0 auto;
+    2) curve the edge of torso
+      border-radius: 20px 20px 100px 100px;
+
+- Brain!  
+  1) Made head visible by giving it color, height, and width
+  .brain { 
+    background: #cc5;
+    height: 150px;
+    width: 150px;
+    }
+
+  2) add round head border-radius!
+    border-radius: 60px 60px 10px 10px;
+    border-bottom: 40px solid #666;
+    // border-bottom only one side of the shape a contrasting border.
+
+    - different look for robot head
+    border-radius: 60px 60px 10px 10px;
+    border-bottom: 40px double #666;
+
+    border-radius: 60px 60px 0 0;
+    border-bottom: 40px dotted #666;
+
+- Laser beam eyes!  use radial gradient
+Radial gradients radiate outward, in all directions, from a central point.
