@@ -155,3 +155,13 @@ background-size: 75px 150px;
 
 OR use % for skipping Math
 background-size: 50% 100%;
+
+- If you make transparent 0 - glow goes away
+background: -webkit-radial-gradient(circle, white 36%, transparent 0%), #cc5;
+
+- Robot to take orders, give it an antenna!
+.beep class right above brain div
+.beep {
+
+}
+<div class="beep"></div> //antenna
