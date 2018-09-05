@@ -214,7 +214,7 @@ Make robot disco with me, shoot lasers
     - move down, y-val increases
     - Unit used for grid squares = pixels
   
-  * 5 ways to position things:
+  * 5 ways to position top right bottom left z-index things:
     1st) static: default positioning
     2nd) relative: move relative to others
     - any time not static, you escape from normal flow and opens door to call on four new properties: top, right, bottom, left
@@ -307,4 +307,46 @@ So create outer HTML element that contains all the robot pieces.  If we wrote CS
 
   http://jsbin.com/kozapa/5/edit?html,output
 
-  
+  - Arm the robot: build cobot with arms and CSS shapes! arm could be letter J in google web font!
+
+  Use Poller One: https://fonts.google.com/specimen/Poller+One
+
+    - click + sign and use embed font link, CSS style
+    <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
+
+    font-family: 'Poller One', cursive;
+
+    - Now we have access to google web font poller one:
+    1) add j to the page
+    2) use css to make it right size and font.
+      Nest dive for the left and right arm inside the torso <div>.  This tells the arms to obey anything we tell the torso, will save lot of hassle later on!
+        <div class="torso">
+          <div class="left">j</div>
+          <div class="right">j</div>
+        </div>
+        
+  .left {
+    font-family: 'Poller One', Verdana, arial, sans-serif;
+    font-weight: bold;
+    font-size: 250px;
+    color: #666;
+  }
+    - For left arm rotate about half turn. next, come up to top of the torso div.  Also, tuck it behind the robot's shoulder.  
+      transform: will help with angle of the arm rotated.
+
+        .left {
+          transform: rotate(200deg);
+          -webkit-transform: rotate(200deg);
+          -moz-transform: rotate(200deg);
+        }
+      1. Apply relative positioning to left arm
+        position: relative;
+      2. Give .left left: -190px;
+      3. Give .left top: -320px;
+  - Now for Right arm!
+  .right {
+    font-family: 'Poller One', Verdana, arial, sans-serif;
+    font-weight: bold;
+    font-size: 250px;
+    color: #666;
+  }

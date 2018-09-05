@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="description" content="dash GA make a robot project">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>COTBOTS</title>
+  <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
   <style>
   /* position will move entire Cotbot over to right! */
   .robot {
@@ -43,6 +45,27 @@
     border-right: 75px solid transparent;
     border-radius: 20px 20px 100px 100px;
   }
+  .left {
+    font-family: 'Poller One', Verdana, arial, sans-serif;
+    font-weight: bold;
+    font-size: 250px;
+    color: #666;
+    transform: rotate(200deg);
+    -webkit-transform: rotate(200deg);
+    -moz-transform: rotate(200deg);
+    /* take arm out of document flow */
+    position: relative;
+    left: -190px;
+    top: -320px;
+    /* push arm back of .torso*/
+    z-index: -1;
+  }
+  .right {
+    font-family: 'Poller One', Verdana, arial, sans-serif;
+    font-weight: bold;
+    font-size: 250px;
+    color: #666;
+  }
   .foot {
     height: 40px;
     width: 40px;
@@ -61,7 +84,10 @@
   <div class="robot">
     <div class="beep"></div>
     <div class="brain"></div>
-    <div class="torso"></div>
+    <div class="torso">
+      <div class="left">j</div>
+      <div class="right">j</div>
+    </div>
     <div class="foot"></div>
   </div>
 </body>
