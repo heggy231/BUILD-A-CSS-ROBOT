@@ -122,5 +122,15 @@ Part 1: Customize shapes using CSS border properties
     border-radius: 60px 60px 0 0;
     border-bottom: 40px dotted #666;
 
-- Laser beam eyes!  use radial gradient
+- Laser beam eyes!  use radial gradient:
 Radial gradients radiate outward, in all directions, from a central point.
+  div {
+    background: radial-gradient(shape, centercolor, outercolor);
+  }
+  For gradient's shape: circle or ellipse 
+  For color: numerical callout to size (in pixels or in percent)
+
+  .brain {
+    background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  }
+  // add in radial gradient with preserve the existing background color!
