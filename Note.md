@@ -141,3 +141,9 @@ Radial gradients radiate outward, in all directions, from a central point.
 brain {
   background-size: 75px; // half of 150 width makes 2 eyes!
 }
+
+Why would cutting the background-size in half give it four eyes?  
+  B/c it thinks there are four 75x75 px background to fill!
+brain {
+  background-size: calc(75px/2) calc(150px/2);
+}
