@@ -241,5 +241,11 @@ Make robot disco with me, shoot lasers
       left: 70px;
     }
     .beep {
-      left: 140px;
+      left: 140px; // beep once was 70px but brain moved 70px therefore add 70px more!
     }
+    - Move the wheels .foot relation to the robot .torso:
+    .foot {
+      position: relative;
+      left: 110px;
+      top: -10px;
+    }    
