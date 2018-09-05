@@ -82,5 +82,15 @@ Part 1: Customize shapes using CSS border properties
       width: 0;
       border-left: 50px solid transparent;
       border-right: 50px solid transparent;
-      border-bottom: 50px solid transparent;
+      border-bottom: 100px solid red;
+    }
+  Note: You are not seeing any div but just bottom border with left and right cutting into it (since it is transparent!)
+
+  - Trapezoid shape of Robot's torso: it is exactly like triangle except it has width value.
+    .torso {
+      height: 0;
+      width: 140px;
+      border-top: 300px solid #bc6;
+      border-left: 75px solid transparent;
+      border-right: 75px solid transparent;
     }
