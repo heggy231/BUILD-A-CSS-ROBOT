@@ -26,4 +26,8 @@ Part 1: Customize shapes using CSS border properties
   * Why are we building robot with HTML and CSS?  
     If I can position multiple HTML elements to build a robot in CSS (some JS), I can lay out all kinds of other things!  No website layout will be too complex!  No oddly-angled or multicornered textbox will elude your shape-making and getting-things-to stay-where-you-want-them-on-the-page skills!
 
+- starting point: stack 3 divs
+<div class="brain"></div>
+<div class="torso"></div>
+<div class="foot"></div>
   
