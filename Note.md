@@ -248,4 +248,18 @@ Make robot disco with me, shoot lasers
       position: relative;
       left: 110px;
       top: -10px;
-    }    
+    }
+
+    Why assign negative value to top for .foot?
+      - a negative top value moves things up, twd the top of the page, by the specified number of pixels.  
+      A negative left value will move things to the left!  relative to .torso    
+
+- Z axis: 
+z by default if zero.  Deeper into page, -z
+closer to the viewr +z. If you want thing go infront give it a > 1 z-value.  Behind < 1 z-value.
+Like top, left, etc, z-index only works on positioned elements.
+
+.foot {
+  z-index: -1;
+}
+
