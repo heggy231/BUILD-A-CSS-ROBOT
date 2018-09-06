@@ -437,3 +437,93 @@ http://jsbin.com/zupivi/edit?html,css,output
 
 
 1. Build a Button to control the robot's laser eyes
+  On/Off Button: 
+    1) CSS class applying more than one html element
+    2) HTML <button> tag
+    3) JQuery toggleClass function
+
+  1) Create special class for when eyes should be blinking, separate from the regular .brain style.
+    - Call it .laser! Take out .brain's CSS animation out and put inside of .laser
+    // animation css from .brain is now inside .laser!
+    .laser {
+      animation: blink .5s infinite;
+      -webkit-animation: blink .5s infinite;
+      -moz-animation: blink .5s infinite;
+    }
+
+  * This will now stop it from blinking since no HTML element is assigned to .laser class yet!
+   http://jsbin.com/kozapa/21/edit?html,output
+
+   <!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="dash GA make a robot project">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>COTBOTS</title>
+  <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
+  <style>
+/* position relative; take robot out of normal doc 
+    flow and move Cotbot over to right! 
+    .robot is container for all of its 
+    robotie parts 
+*/
+  .robot {
+      position: relative;
+      left: 200px;
+  }
+  .beep {
+    width: 5px;
+    height: 0;
+    /* border: width style color */
+    border: 5px solid transparent;
+    border-top: 10px solid #777;
+    border-bottom: 80px solid #888;
+    /* opens .beep to break out of static positioning */
+    position: relative;
+    /* go away from left side means push 70px to right */
+    left: 140px;
+  }
+  @keyframes blink {
+    50% {
+      background: radial-gradient(circle, red 15%, transparent 40%), #673AB7;
+      /* half of 150 width makes 2 eyes! */
+      background-size: 50% 100%;
+    }  
+  }
+  @-webkit-keyframes blink {
+    50% {
+      background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #673AB7;
+      background-size: 50% 100%;
+    }  
+  }
+  @-moz-keyframes blink {
+    50% {
+      background: -moz-radial-gradient(circle, red 15%, transparent 40%), #673AB7;
+      background-size: 50% 100%;
+    }  
+  }
+  .laser {
+    animation: blink .5s infinite;
+    -webkit-animation: blink .5s infinite;
+    -moz-animation: blink .5s infinite;
+  }
+  .brain { 
+    background: radial-gradient(circle, white 15%, transparent 40%), #673AB7;
+    background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #673AB7;
+    background: -moz-radial-gradient(circle, white 15%, transparent 40%), #673AB7;
+    /* half of 150 width makes 2 eyes! */
+    background-size: 50% 100%;
+    height: 150px;
+    width: 150px;
+    border-radius: 60px 60px 10px 10px;
+    border-bottom: 40px double #666;
+    position: relative;
+    left: 70px;
+  }
+
+  - Next, toggle .laser on|off, just like .show-description class in Esha's Restaurant.
+    1) Make toggle on|button for .laser. after robot div in HTML.
+      </div> // robot div closing
+      <button> laser eyes on|off <button>
+      </body>
