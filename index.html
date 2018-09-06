@@ -7,7 +7,7 @@
   <title>COTBOTS</title>
   <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
   <style>
-  /* position will move entire Cotbot over to right! */
+  /* position relative; take robot out of normal doc flow and move Cotbot over to right! .robot is container for all of its robotie parts */
   .robot {
       position: relative;
       left: 200px;
@@ -24,7 +24,13 @@
     /* go away from left side means push 70px to right */
     left: 140px;
   }
-  .brain { 
+  @keyframes blink {
+    50% {
+      background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
+    }  
+  }
+  .brain {
+    animation: blink .5s infinite;
     background: radial-gradient(circle, white 15%, transparent 40%), #673AB7;
     background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #673AB7;
     background: -moz-radial-gradient(circle, white 15%, transparent 40%), #673AB7;
@@ -68,6 +74,10 @@
     transform: scaleY(-1) rotate(20deg);
     -webkit-transform: scaleY(-1) rotate(20deg);
     -moz-transform: scaleY(-1) rotate(20deg);
+    position: relative;
+    left: 190px; 
+    top: -620px; 
+    z-index: -1;
   }
   .foot {
     height: 40px;

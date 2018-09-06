@@ -363,3 +363,43 @@ So create outer HTML element that contains all the robot pieces.  If we wrote CS
   -webkit-transform: scaleY(-1) rotate(20deg);
   -moz-transform: scaleY(-1) rotate(20deg);
 }
+
+- Now, right arm is oriented right way.  Let's move it up!
+  1) to take it out of regular document flow. position: relative.
+  2) right: -203px; top: -612px; z-index: -1;
+
+- Laser beam eyes! use CSS animation
+  1) define CSS anima
+    - define based on the property you want to change of the element you're animating
+      We are animating .brain, we want to change the color of the eye gradient, which is part of background property!.  We want animation to flash from white to red. Keyframing is an animation term (animators only worked on the most important frames, and the in-between frames were drawn by assistants.)
+      We are making a keyframe animation called blink.  
+
+
+      * before 
+      .brain {
+        background: radial-gradient(circle, white 15%, transparent 40%), #cc5; 
+      }
+  http://jsbin.com/kozapa/12/edit?html,output
+
+      * after
+      // make a keyframe animation: blink
+      @keyframes blink {
+        50% {
+          background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
+        }  
+      }
+      
+      // At the start and end of the animation, it will be the same as .brain's default background, with white eyes.
+      // 50% of the way through the animation, the color changes from white to red.  @keyframes 50% { ... red ...}
+      // Only element is changing once, only need single keyframe.
+      // order matters: 1) Define keyfram above the .brain. 
+      // 2) Assign it to brain; animation: blink, make it .5seconds long and repeat it infinity.
+
+      .brain {
+        animation: blink .5s infinite;
+      }
+
+    http://jsbin.com/kozapa/14/edit?html,output
+
+  2) Assign CSS anima
+    - 
