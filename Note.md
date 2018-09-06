@@ -416,3 +416,15 @@ So create outer HTML element that contains all the robot pieces.  If we wrote CS
   }
 
   http://jsbin.com/kozapa/15/edit?html,output
+
+3) more on vendor prefix,  
+.brain {
+    animation: blink .5s infinite;
+    -webkit-animation: blink .5s infinite;
+    -moz-animation: blink .5s infinite;
+
+- How to get the blink to stop?
+1. comment out laser eye keyframe definition
+- control the lazer eye
+
+http://jsbin.com/zupivi/edit?html,css,output

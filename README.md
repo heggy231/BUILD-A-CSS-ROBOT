@@ -14,3 +14,7 @@ Make robot disco with me, shoot lasers
 2. The idea of "in front of" and "behind" in CSS
 3. Writing CSS transforms to flip and rotate elements
 
+# Part 3: Creating and Controlling Animations with JS.
+- Mission:
+1. Build a Button to control the robot's laser eyes
+2. Write JavaScript Program that generates random colors to help Cotter dance all night!
