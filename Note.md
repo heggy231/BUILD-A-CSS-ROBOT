@@ -350,3 +350,16 @@ So create outer HTML element that contains all the robot pieces.  If we wrote CS
     font-size: 250px;
     color: #666;
   }
+.right {
+  transform: rotate(184deg); // anyway you transform the arm it still looks like left arm
+}
+
+  - to correct this: use scaleY, finds the center of the element, flips it along the Y-axis.
+    * Problem! You can only declare transform once for any item you style.  But we need transform: rotate, transform: scaleY 
+
+// if something needs more than one transform, they all get listed together in the same declaration
+.right {
+  transform: scaleY(-1) rotate(20deg);
+  -webkit-transform: scaleY(-1) rotate(20deg);
+  -moz-transform: scaleY(-1) rotate(20deg);
+}
