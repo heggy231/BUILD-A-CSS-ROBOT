@@ -527,3 +527,13 @@ http://jsbin.com/zupivi/edit?html,css,output
       </div> // robot div closing
       <button> laser eyes on|off <button>
       </body>
+    2) name button to class flash
+      <button class="flash"> laser eyes on|off <button>
+      flash functions as toggle (turn something on/off)
+    3) add jQuery
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      or using GA Jquery
+      <script src="/assets/jquery.js"></script>
+
+    4) jQuery lib has a function commonly used such as toggleClass!  "JQuery: when you hear a click on the .flash class, toggle the class .laser on .brain!"
