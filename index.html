@@ -29,6 +29,16 @@
       background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
     }  
   }
+  @-webkit-keyframes blink {
+    50% {
+      background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+    }  
+  }
+  @-moz-keyframes blink {
+    50% {
+      background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+    }  
+  }
   .brain {
     animation: blink .5s infinite;
     background: radial-gradient(circle, white 15%, transparent 40%), #673AB7;

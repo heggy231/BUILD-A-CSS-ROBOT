@@ -402,4 +402,17 @@ So create outer HTML element that contains all the robot pieces.  If we wrote CS
     http://jsbin.com/kozapa/14/edit?html,output
 
   2) Assign CSS anima
-    - 
+  Remember the vendor prefix!
+  
+  @-webkit-keyframes blink {
+    50% {
+      background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+    }  
+  }
+  @-moz-keyframes blink {
+    50% {
+      background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+    }  
+  }
+
+  http://jsbin.com/kozapa/15/edit?html,output
