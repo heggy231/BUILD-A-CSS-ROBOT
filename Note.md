@@ -428,3 +428,12 @@ So create outer HTML element that contains all the robot pieces.  If we wrote CS
 - control the lazer eye
 
 http://jsbin.com/zupivi/edit?html,css,output
+
+
+# Part 3: Creating and Controlling Animations with JS.
+- Mission:
+1. Build a Button to control the robot's laser eyes
+2. Write JavaScript Program that generates random colors to help Cotter dance all night!
+
+
+1. Build a Button to control the robot's laser eyes
