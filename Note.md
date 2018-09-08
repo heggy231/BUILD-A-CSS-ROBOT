@@ -621,4 +621,30 @@ http://jsbin.com/kozapa/27/edit?html,output
 
   0.831 x 255 = 211.905
 
-  Math.floor(211.905) = 211 // only takes the integer part of the numbe
+  Math.floor(211.905) = 211 // only takes the integer part of the number
+
+- Next, Make JS remember those numbers by storing it!  Grad number btwn 0 - 255!  only the integers (Math.floor)
+var red = Math.floor(Math.random() * 255);
+
+  -How to get one function to create mult. variables?  RGB color values
+
+  $(".color").click(function() {
+    var red = Math.floor(Math.random() * 255);
+    var green = Math.floor(Math.random() * 255);
+    var blue = Math.floor(Math.random() * 255);
+  });
+
+  * summary: when .color is clicked, generate red 0 - 255, green 0 - 255, blue 0 - 255
+  // when color clicked
+  $(".color").click(function() {
+    var red = Math.floor(Math.random() * 255);
+    var green = Math.floor(Math.random() * 255);
+    var blue = Math.floor(Math.random() * 255);
+
+    // display the three values in an alert window
+    // rgb(38, 107, 204) - red green blue
+    alert(red + "," + green + "," + blue);
+  });
+
+  
+

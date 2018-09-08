@@ -131,11 +131,14 @@
 
   // when color is clicked, pick a number 0-255
     $(".color").click(function() {
-      var number = Math.floor(Math.random() * 255);
+      var red = Math.floor(Math.random() * 255);
+      var green = Math.floor(Math.random() * 255);
+      var blue = Math.floor(Math.random() * 255);
 
-      // display the number in an alert window
-      alert(number);
-    });  
+      // display the three values in an alert window
+      // rgb(38, 107, 204) - red green blue
+      alert(red + "," + green + "," + blue);
+    });
   </script>
 </body>
 </html>
