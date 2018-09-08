@@ -122,5 +122,20 @@
     <div class="foot"></div>
   </div>
   <button class="flash">laser eyes on/off</button>
+  <button class="color">change color!</button>
+  <script>
+  // "JQuery: when you hear a click on the .flash class, toggle the class .laser on .brain!"
+    $('.flash').click(function() {
+      $('.brain').toggleClass('laser');
+    });
+
+  // when color is clicked, pick a number 0-255
+    $(".color").click(function() {
+      var number = Math.floor(Math.random() * 255);
+
+      // display the number in an alert window
+      alert(number);
+    });  
+  </script>
 </body>
 </html>

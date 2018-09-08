@@ -537,3 +537,80 @@ http://jsbin.com/zupivi/edit?html,css,output
       <script src="/assets/jquery.js"></script>
 
     4) jQuery lib has a function commonly used such as toggleClass!  "JQuery: when you hear a click on the .flash class, toggle the class .laser on .brain!"
+<script>
+    $('.flash').click(function() {
+      $('.brain').toggleClass('laser');
+    });
+
+    // insert this code end of the body!
+</script>
+    http://jsbin.com/kozapa/24/edit?html,output
+
+
+"From a design perspective, the syntax for jQuery is: "When I do this, make the CSS do this."
+
+The more common slogan is: Find something, do Something."
+
+- Chris Coyler
+
+"JQuery: when you hear a click on the .flash class, toggle the class .laser on .brain!"
+<script>
+    $('.flash').click(function() {
+      $('.brain').toggleClass('laser');
+    });
+
+    // insert this code end of the body!
+</script>
+https://dash.generalassemb.ly/projects/cotbots-3
+
+// when JQuery hears click on class .flash
+$('.flash').click();
+
+... it should add (or remove) the .laser class to (or from) anything with a .brain class.
+function() {
+  $('brain').toggleClass('laser');
+}
+
+- Next, background color change for coBot robot flashing strobe light color.  Instead of writing alternate body style and toggling it on|off, you're going to generate an infinite number of random colors!!!
+
+  * What your code will do:
+  1) Listen to button clicked
+  2) Generate random color value background
+  3) Change <body> background to new color
+
+  1. Make a button by with class="color"
+  2. Generate a completely random color value.  Use Math. function.
+    - WE used functions that do useful things, like .click and .toggleClass.
+
+    - work with functions that p
+    Produces value! a number
+      RGBA(red, green, blue, alpha)
+      value 0 - 255
+
+      000         black
+      255 255 0   yellow
+      255 255 255 white
+
+      Create a random numbers (0 to 255), then assigning 1 as the alpha value, 
+
+rgba(random, random, random, 1)
+ex) rgba(253, 88, 48, 1)  // red
+    rgba(38, 107, 204, 1) // blue
+
+Math.floor(Math.random() * 255) // 0 - 255
+Math.floor(Math.random() * 3) // 0 - 3
+  This gives the number between what ever number you multiply and zero!
+
+// when color is clicked, pick a number 0-255
+$(".color").click(function() {
+  var number = Math.floor(Math.random() * 255);
+
+  // display the number in an alert window
+  alert(number);
+});
+http://jsbin.com/kozapa/27/edit?html,output
+
+- Math.random() method creates random number betwn 0 an 1.
+  0 X 255 = 0
+  1 X 255 = 255
+  // Mult random number by 255, get random number btwn 0 and 255.
