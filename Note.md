@@ -614,3 +614,11 @@ http://jsbin.com/kozapa/27/edit?html,output
   0 X 255 = 0
   1 X 255 = 255
   // Mult random number by 255, get random number btwn 0 and 255.
+
+- Math.floor() rounds any value down!! to a whole number
+  0.5 x 255 = 127.5
+  Math.floor(127.5) = 127
+
+  0.831 x 255 = 211.905
+
+  Math.floor(211.905) = 211 // only takes the integer part of the numbe
