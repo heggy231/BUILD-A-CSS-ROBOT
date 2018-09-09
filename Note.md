@@ -694,3 +694,56 @@ Use JQuery
 
   // change the body's background to random color
   $("body").css("background", randomRGBA);
+
+- http://jsbin.com/kozapa/31/edit?html,output
+
+- Make Patrick dance gif robot!
+where gif lives:
+http://dash.ga.co/assets/dance_cotter.gif
+
+<img src="http://dash.ga.co/assets/dance_cotter.gif">
+
+position Patrick next to robot
+  img {
+    position: absolute;
+    top: 200px;
+    left: 400px;
+  }
+
+http://jsbin.com/kozapa/32/edit?html,output
+
+- Use @keyframe animation to make the robot's eyes blink.  It affected the background prop of the brain class.
+
+  - keyframe anima will affect the position of the img!
+  - img will start from 800px away from the left side of the screen and then move to its defined left position of 400px.
+
+// img start 800px away from left
+@keyframes dance {
+  from {
+    left: 800px;
+  }
+}
+// add -webkit-
+@-webkit-keyframes dance {
+@-moz-keyframes dance {
+
+// defined patrick's position
+img {
+    position: absolute;
+    top: 200px;
+    left: 400px;
+}
+
+- It takes two to work for keyframes! Nothing happens b/c img doesn't know that it's supposed to listen to dance yet!
+// part 1, define keyframes
+@keyframes dance {
+  from {
+    left: 800px;
+  }
+}
+// run img style animation script for 4 sec
+img {
+  animation: dance 4s infinite;
+  -webkit-animation: dance 4s infinite;
+  -moz-animation: dance 4s infinite;
+}
