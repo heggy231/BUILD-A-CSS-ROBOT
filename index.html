@@ -131,10 +131,16 @@
 
   // when color is clicked, pick a number 0-255
     $(".color").click(function() {
+      var red = Math.floor(Math.random() * 255);
+      var green = Math.floor(Math.random() * 255);
+      var blue = Math.floor(Math.random() * 255);
+
+      // randomRGBA is the RGBA value that will put into your CSS to change the screen's background color
       var randomRGBA = 'rgba('+red+', '+green+', '+blue+', 1)';
 
-  // randomRGBA is the RGBA value that will put into your CSS to change the screen's background color
-    alert(randomRGBA);
+      // change the body's background to random color
+      $("body").css("background", randomRGBA);
+      // alert(randomRGBA);
     });
   </script>
 </body>

@@ -660,9 +660,37 @@ var red = Math.floor(Math.random() * 255);
 
   var randomRGBA = 'rgba('+red+', '+green+', '+blue+', 1)';
 
-  randomRGBA is the RGBA value that will put into your CSS to change the screen's background color!
+-- update on code ---
+  $(".color").click(function() {
+    var red = Math.floor(Math.random() * 255);
+    var green = Math.floor(Math.random() * 255);
+    var blue = Math.floor(Math.random() * 255);
+    var randomRGBA = 'rgba('+red+', '+green+', '+blue+', 1)';
 
-  alert(randomRGBA)
+    alert(randomRGBA);
+  });
 
-  
+  * randomRGBA is the RGBA value that will put into your CSS to change the screen's background color!
 
+http://jsbin.com/kozapa/30/edit?html,output
+
+- String Theory:
+  JavaScript treats '' quotes as a special type of value called a string, which is treated as regular text, not as code.  
+
+  - comment out 
+  alert(randomRGBA);
+
+  - Get JS to do something with randomly generated RGBA value byt applying into CSS background!
+
+We want to insert something like this into CSS!
+Use JQuery
+    body {
+      background: rgba(red, green, blue, 1);
+    }
+
+- Making CSS with JS: JQuery function toggleClass Add CSS classes to your existing HTML, and to take them out.  
+
+// Tells JS to change the body's background to your randomRGBA value in the css.
+
+  // change the body's background to random color
+  $("body").css("background", randomRGBA);
