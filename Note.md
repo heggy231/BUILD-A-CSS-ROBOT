@@ -646,5 +646,23 @@ var red = Math.floor(Math.random() * 255);
     alert(red + "," + green + "," + blue);
   });
 
+# Part 4: Make and Modify CSS Styles with JavaScript
+  1. Convert your random numbers into brand-new CSS
+  2. Help the robot make some groovy mood lighting
+  3. Give Cotter the chance to go out dancing with his robot
+
+  1) Variable Recap: 
+    - have names
+    - greedily slurp up values
+    - split values out where you tell them
+
+  This combines 3 var you already made into a brand-new var called 
+
+  var randomRGBA = 'rgba('+red+', '+green+', '+blue+', 1)';
+
+  randomRGBA is the RGBA value that will put into your CSS to change the screen's background color!
+
+  alert(randomRGBA)
+
   
 
