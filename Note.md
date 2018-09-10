@@ -751,3 +751,13 @@ img {
 http://jsbin.com/kozapa/32/edit?html,output
 
 - Add a button to stop Patrick from dancing
+<button class="moves">break/dance</button>
+http://jsbin.com/kozapa/34/edit?html,output
+
+- Toggle vs. ToggleClass
+No need to toggle a class on img element; can toggle the element itself.
+
+  * JQuery click the moves button, every imag on the page will toggle on or off.
+    $(".moves").click(function() {
+      $("img").toggle();
+    });
