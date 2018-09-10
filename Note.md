@@ -761,3 +761,14 @@ No need to toggle a class on img element; can toggle the element itself.
     $(".moves").click(function() {
       $("img").toggle();
     });
+Use toggleclass to add or subtract a class from HTML element.  If you toggle an HTML element itself, all instances of that element will be added or subtracted from the page!  Warning!  for our site we only have 1 img!
+
+// "JQuery: when you hear a click on the .flash class, toggle the class .laser on .brain!"
+  $('.flash').click(function() {
+    $('.brain').toggleClass('laser');
+  });
+
+// toggle img patrick dancing on or off when click on moves button
+  $(".moves").click(function() {
+    $("img").toggle();
+  });
