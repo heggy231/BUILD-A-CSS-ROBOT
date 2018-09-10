@@ -747,3 +747,7 @@ img {
   -webkit-animation: dance 4s infinite;
   -moz-animation: dance 4s infinite;
 }
+
+http://jsbin.com/kozapa/32/edit?html,output
+
+- Add a button to stop Patrick from dancing
