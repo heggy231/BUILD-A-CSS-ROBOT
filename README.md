@@ -1,5 +1,5 @@
 # BUILD-A-CSS-ROBOT
-Eccentric millionaire Cotter Patrick needs a life-like companion
+Eccentric millionaire Cotter Patrick needs a life-like companion\
 **[DEMO](https://heggy231.github.io/BUILD-A-CSS-ROBOT/)**
 
 ## Part 1: Customize shapes using CSS border properties
